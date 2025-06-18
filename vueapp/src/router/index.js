@@ -2,11 +2,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 // Import views
-import Welcomess from '../views/Welcome.vue'
-import akash from '../views/akash.vue'
-import mom from '../views/mom.vue'    
-import father from '../views/father.vue'
-import Arsh from '../views/Arsh.vue'
+import Welcomess from '../views/Resume.vue'
+import akash from '../views/Home.vue'
+import mom from '../views/Contact.vue'    
+import father from '../views/Projects.vue'
+import Arsh from '../views/About.vue'
 
 const routes = [
   { path: '/', component: Welcomess },

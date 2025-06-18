@@ -1,5 +1,5 @@
 <script setup>
-import Todo from '../components/Todo.vue';
+
 </script>
 
 
@@ -16,10 +16,7 @@ import Todo from '../components/Todo.vue';
       >
         Get Started
       </a>
-    <Todo />
-      <p class="mt-6 text-gray-500 text-sm">
-        Made with ❤️ using Vue 3 and Tailwind CSS
-      </p>
+    
     </div>
   </div>
 </template>
