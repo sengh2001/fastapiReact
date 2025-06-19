@@ -22,36 +22,32 @@
   </div>
 </template>
 
-<style scoped>
-body {
-  background-color: #f8f9fa;
-}
-</style>
-
-
 <script setup>
 import { onMounted } from 'vue'
-import api from '@/lib/axios'  // Adjust based on your path
+import { useRouter } from 'vue-router'
+import api from '@/lib/axios'  // Adjust if needed
+
+const router = useRouter()
 
 onMounted(() => {
-  // Load Google Identity script
   const script = document.createElement('script')
   script.src = 'https://accounts.google.com/gsi/client'
   script.async = true
   script.defer = true
   document.head.appendChild(script)
 
-  // Define global callback
   window.handleCredentialResponse = async (response) => {
     try {
       const { data } = await api.post('/auth/google', { token: response.credential })
-      console.log('Login success:', data)
 
-      // Store JWT (you can use localStorage or cookies)
+      // Save JWT
       localStorage.setItem('token', data.access_token)
 
-      // Optionally redirect user
+      // Optional greeting
       alert(`Welcome ${data.user.name}!`)
+
+      // 🔁 Redirect to /ForMembers
+      router.push('/ForMembers')
     } catch (err) {
       console.error('Login error:', err)
       alert('Login failed.')
