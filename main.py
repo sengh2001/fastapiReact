@@ -2,8 +2,14 @@ from fastapi import FastAPI, HTTPException, Depends
 from typing import List
 from sqlmodel import Session, select
 from fastapi.middleware.cors import CORSMiddleware
-from models import Todo, SQLModel
+from models import Todo, Contact
+from email_utils import send_contact_email
 from sqlmodel import create_engine
+from sqlmodel import SQLModel
+
+from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
+from auth import verify_google_token, create_jwt_token
 
 # Database setup
 DATABASE_URL = "sqlite:///./todos.db"  # Change this to PostgreSQL if needed
@@ -35,6 +41,59 @@ def on_startup():
 @app.get("/")
 def read_root():
     return {"Hello !": "Backend "}
+
+@app.post("/contact")
+async def contact_form(contact: Contact, session: Session = Depends(get_session)):
+    session.add(contact)
+    session.commit()
+    await send_contact_email(contact.name, contact.email, contact.message)
+    return {"message": "Message sent successfully!"}
+
+@app.post("/auth/google")
+async def google_auth(payload: dict):
+    token = payload.get("token")
+    if not token:
+        return {"error": "Missing token"}
+
+    user_info = verify_google_token(token)
+    jwt_token = create_jwt_token(user_info)
+
+    return {
+        "access_token": jwt_token,
+        "token_type": "bearer",
+        "user": user_info,
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @app.get("/todos")
 def get_todos():

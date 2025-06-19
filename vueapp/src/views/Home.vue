@@ -1,6 +1,6 @@
 <!-- src/App.vue -->
 <template>
-  hehe m akash !
+  hehe m Homepage !
 </template>
 
 <script setup>

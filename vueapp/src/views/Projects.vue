@@ -1,6 +1,6 @@
 <!-- src/App.vue -->
 <template>
-  hehe ofc m you dad !
+  hehe ofc m Projects Page !
 </template>
 
 <script setup>

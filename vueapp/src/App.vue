@@ -2,40 +2,52 @@
   <div class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <router-link class="navbar-brand neon-text" to="/">
-      <span class="flicker-slow">ਅਰਸ਼ਦੀਪ</span>
-      <span class="flicker-fast">ਸਿੰਘ</span>
-    </router-link>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <router-link class="nav-link neon-hover" to="/">
-            <span class="nav-glow">Home</span>
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link neon-hover" to="/about">
-            <span class="nav-glow">About</span>
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link neon-hover" to="/projects">
-            <span class="nav-glow">Projects</span>
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link neon-hover" to="/contact">
-            <span class="nav-glow">Contact</span>
-          </router-link>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+      <div class="container">
+        <router-link class="navbar-brand neon-text" to="/Home">
+          <span class="flicker-slow">ਅਰਸ਼ਦੀਪ</span>
+          <span class="flicker-fast">ਸਿੰਘ</span>
+        </router-link>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <router-link class="nav-link neon-hover" to="/Home">
+                <span class="nav-glow">Home</span>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link neon-hover" to="/About">
+                <span class="nav-glow">About</span>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link neon-hover" to="/Projects">
+                <span class="nav-glow">Projects</span>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link neon-hover" to="/Contact">
+                <span class="nav-glow">Contact</span>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link neon-hover" to="/Resume">
+                <span class="nav-glow">Resume</span>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link neon-hover"
+                to="/Members">
+                <span class="nav-glow">Members</span>
+              </router-link>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <!-- Main content -->
     <main class="flex-grow-1 mt-5 pt-3">
@@ -44,31 +56,32 @@
 
     <!-- Footer -->
     <footer class="site-footer py-4 bg-light text-center mt-auto">
-  <div class="container">
-    <div class="footer-content">
-      <p class="copyright mb-3">&copy; 2025 Arshdeep Singh. All rights reserved.</p>
-      
-      <div class="social-links">
-        <a href="https://github.com/sengh2001" target="_blank" rel="noopener noreferrer" class="social-link">
-          <i class="bi bi-github"></i>
-          <span class="visually-hidden">GitHub</span>
-        </a>
-        <a href="https://www.linkedin.com/in/arshdeep-singh-bhankhar/" target="_blank" rel="noopener noreferrer" class="social-link">
-          <i class="bi bi-linkedin"></i>
-          <span class="visually-hidden">LinkedIn</span>
-        </a>
-        <a href="https://twitter.com/arshdeep" target="_blank" rel="noopener noreferrer" class="social-link">
-          <i class="bi bi-twitter-x"></i>
-          <span class="visually-hidden">Twitter</span>
-        </a>
-        <a href="mailto:arsh.thapar24@gmail.com" class="social-link">
-          <i class="bi bi-envelope-fill"></i>
-          <span class="visually-hidden">Email</span>
-        </a>
+      <div class="container">
+        <div class="footer-content">
+          <p class="copyright mb-3">&copy; 2025 Arshdeep Singh. All rights reserved.</p>
+
+          <div class="social-links">
+            <a href="https://github.com/sengh2001" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="bi bi-github"></i>
+              <span class="visually-hidden">GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/arshdeep-singh-bhankhar/" target="_blank" rel="noopener noreferrer"
+              class="social-link">
+              <i class="bi bi-linkedin"></i>
+              <span class="visually-hidden">LinkedIn</span>
+            </a>
+            <a href="https://twitter.com/arshdeep" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="bi bi-twitter-x"></i>
+              <span class="visually-hidden">Twitter</span>
+            </a>
+            <a href="mailto:arsh.thapar24@gmail.com" class="social-link">
+              <i class="bi bi-envelope-fill"></i>
+              <span class="visually-hidden">Email</span>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
   </div>
 </template>
@@ -81,51 +94,52 @@
 main {
   padding-top: 56px;
 }
-  .site-footer {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .copyright {
-    color: #6c757d;
-    font-size: 0.9rem;
-  }
-  
-  .social-links {
-    display: flex;
-    gap: 1.25rem;
-  }
-  
-  .social-link {
-    color: #495057;
-    font-size: 1.25rem;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  .social-link:hover {
-    color: #0d6efd;
-    transform: translateY(-2px);
-  }
-  
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-  
+
+.site-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copyright {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.social-link {
+  color: #495057;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-link:hover {
+  color: #0d6efd;
+  transform: translateY(-2px);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .navbar {
   background: rgba(10, 10, 15, 0.8) !important;
   backdrop-filter: blur(10px);
@@ -139,7 +153,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
-  text-shadow: 
+  text-shadow:
     0 0 5px #fff,
     0 0 10px #fff,
     0 0 20px #0ff,
@@ -155,15 +169,29 @@ main {
 }
 
 @keyframes flicker {
-  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
     opacity: 1;
-    text-shadow: 
+    text-shadow:
       0 0 5px #fff,
       0 0 10px #fff,
       0 0 20px #0ff,
       0 0 40px #0ff;
   }
-  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
     opacity: 0.5;
     text-shadow: none;
   }

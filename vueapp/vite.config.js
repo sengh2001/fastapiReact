@@ -1,18 +1,17 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import path from 'path' // ⬅️ Required to resolve absolute path
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
   server: {
     fs: {
-      // Allow serving files from node_modules
-      allow: ['..'] // This allows accessing files one level up from project root
+      allow: ['..']
     }
   },
   resolve: {
     alias: {
-      // Optional: Create an alias for easier imports
+      '@': path.resolve(__dirname, './src'), // ⬅️ This enables `@/` imports
       '~bootstrap-icons': '/node_modules/bootstrap-icons'
     }
   }
