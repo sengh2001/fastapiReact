@@ -43,8 +43,8 @@ onMounted(() => {
       // Save JWT
       localStorage.setItem('token', data.access_token)
 
-      // Optional greeting
-      alert(`Welcome ${data.user.name}!`)
+      // ✅ Store the user info (e.g., name, email, etc.)
+      localStorage.setItem('user', JSON.stringify(data.user))
 
       // 🔁 Redirect to /ForMembers
       router.push('/ForMembers')
